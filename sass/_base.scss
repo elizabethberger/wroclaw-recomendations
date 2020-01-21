@@ -1,0 +1,37 @@
+:root {
+    --grey-light-1: #faf9f9;
+    --grey-light-2: #f4f2f2;
+    --grey-light-3: #f0eeee;
+    --grey-light-4: #ccc;
+    --back-color: rgb(0, 0, 0);
+    --grey-dark-1: #333;
+    --grey-dark-2: #777;
+    --grey-dark-3: #999;
+
+    --white: #fff;
+
+    --shadow-dark: 0 2rem 6rem rgba(0, 0, 0, 0.3);
+    --shadow-light: 0 2rem 5rem rgba(0, 0, 0, 0.06);
+}
+
+    $bp-largest: 75em;
+    $bp-large: 68.75em;
+    $bp-medium: 56.25em;
+
+    $bp-small: 37.5em;
+
+    $bp-smallest: 31.5em;
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Times New Roman", sans-serif;
+}
+
+.header {
+    height: 100px;
+    background: --grey-dark-1;
+    padding: 0 20px;
+    margin: 0;
+    color: var(--black-color);
+}

@@ -1,0 +1,100 @@
+:root {
+  --grey-light-1: #faf9f9;
+  --grey-light-2: #f4f2f2;
+  --grey-light-3: #f0eeee;
+  --grey-light-4: #ccc;
+  --back-color: rgb(0, 0, 0);
+  --grey-dark-1: #333;
+  --grey-dark-2: #777;
+  --grey-dark-3: #999;
+  --white: #fff;
+  --shadow-dark: 0 2rem 6rem rgba(0, 0, 0, 0.3);
+  --shadow-light: 0 2rem 5rem rgba(0, 0, 0, 0.06); }
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Times New Roman", sans-serif; }
+
+.header {
+  height: 100px;
+  background: --grey-dark-1;
+  padding: 0 20px;
+  margin: 0;
+  color: var(--black-color); }
+
+.logo {
+  line-height: 100px;
+  float: left;
+  text-transform: uppercase; }
+
+.menu {
+  float: right;
+  line-height: 100px; }
+  @media only screen and (max-width: 56.25em) {
+    .menu {
+      position: fixed;
+      width: 100%;
+      height: 100vh;
+      background: #fff;
+      right: -100%;
+      left: 0;
+      top: 0;
+      text-align: center;
+      line-height: normal;
+      padding: 80px 0; } }
+
+.menu a {
+  color: var(--black-color);
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 0 10px; }
+  @media only screen and (max-width: 56.25em) {
+    .menu a {
+      display: block;
+      padding: 20px; } }
+
+.show-menu-btn,
+.hide-menu-btn {
+  transition: 0.4s;
+  font-size: 30px;
+  cursor: pointer;
+  display: none; }
+  @media only screen and (max-width: 56.25em) {
+    .show-menu-btn,
+    .hide-menu-btn {
+      display: block; } }
+
+@media only screen and (max-width: 56.25em) {
+  .hide-menu-btn {
+    position: absolute;
+    top: 40px;
+    right: 40px; } }
+
+.show-menu-btn {
+  float: right; }
+
+.menu a:hover,
+.show-menu-btn:hover,
+.hide-menu-btn:hover {
+  color: var(--grey-dark-3); }
+
+.show-menu-btn i {
+  line-height: 100px; }
+
+#chk {
+  position: absolute;
+  visibility: hidden;
+  z-index: -1; }
+
+@media only screen and (max-width: 56.25em) {
+  #chk:checked ~ .menu {
+    right: 0; } }
+
+.header-shadow {
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12); }
+
+.header-padding {
+  margin: 0;
+  border: 0;
+  padding: 5px 16px !important; }
