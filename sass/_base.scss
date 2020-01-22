@@ -28,10 +28,13 @@
     font-family: "Times New Roman", sans-serif;
 }
 
-.header {
-    height: 100px;
-    background: --grey-dark-1;
-    padding: 0 20px;
-    margin: 0;
-    color: var(--black-color);
+html { 
+}
+
+body {
+  font-family: 'Cinzel', serif;
+  background: black;
+  color: white;
+  height: 100%;
+  width: 100%;
 }
