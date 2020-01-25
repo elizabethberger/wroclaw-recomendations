@@ -1,0 +1,52 @@
+body {
+    font-weight: 400;
+    /*font-size: 16px;*/
+    line-height: 1.5;
+}
+
+.heading-primary {
+    color: var(--white);
+    text-transform: uppercase;
+    font-family: georgia, serif;
+
+    backface-visibility: hidden;
+    margin-top: 30rem;
+    margin-bottom: 2rem;
+
+    &--main {
+        display: block;
+        font-size: 5rem;
+        font-weight: 400;
+        letter-spacing: 3rem;
+
+        animation-name: moveInLeft;
+        animation-duration: 1s;
+        animation-timing-function: ease-out;
+    }
+
+    &--sub {
+        display: block;
+        font-size: 4rem;
+        font-weight: 700;
+        letter-spacing: 1.3rem;
+        animation: moveInRight 1s ease-out;
+        margin-bottom: 5rem;
+    }
+}
+
+.heading-primary a {
+  font-size: 45px;
+  color: #fff;
+  -webkit-transition: all .2s ease-in-out;
+  -moz-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+}
+
+.heading-primary a:hover {
+  font-size: 55px;
+}
+
+.fa-angle-double-down {
+  padding: 10px;
+  vertical-align: 60%;
+}

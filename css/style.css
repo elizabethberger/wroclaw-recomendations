@@ -15,24 +15,75 @@
   margin: 0;
   padding: 0; }
 
+html {
+  font-family: georgia, serif;
+  font-size: 62.5%;
+  /*
+    @include respond(tab-land) {
+        //width <900 ?
+        font-size: 56.25%; //1rem = 9 px; 9/16
+    }
+
+    @include respond(tab-port) {
+        //width < 600 ?
+        font-size: 50%; //1rem = 8 px; 8/16= 50%
+    }
+
+    @include respond(big-desktop) {
+        font-size: 75%; //1rem=12, 12/16
+    }
+*/ }
+
 body {
   background: black;
   color: white;
   height: 100%;
-  width: 100%; }
+  width: 100%;
+  /*
+    @include respond(tab-port) {
+        padding: 0;
+    }
+*/ }
 
+/*
+0 - 600px:      Phone
+600 - 900px:    Tablet portrait
+900 - 1200px:   Tablet landscape
+[1200 - 1800] is where our normal styles apply
+1800px + :      Big desktop
+$breakpoint arguement choices:
+- phone
+- tab-port
+- tab-land
+- big-desktop
+ORDER: Base + typography > general layout + grid > page layout > components
+1em = 16px
+*/
 .logo {
   line-height: 100px;
   color: var(--white);
   float: left;
+  letter-spacing: .2rem;
+  padding: 0 10px 0 30px;
+  font-size: 20px;
   text-transform: uppercase;
   cursor: pointer;
-  font-family: 'Cinzel', serif; }
+  font-family: 'Bowlby+One+SC', serif; }
+  .logo img {
+    font-size: 10px;
+    display: block;
+    width: 30px;
+    height: 30px;
+    float: right;
+    padding: 30px 10px; }
 
 .menu {
   float: right;
   line-height: 100px;
-  padding: 0 30px 0 10px; }
+  padding: 0 50px 0 10px;
+  font-family: georgia, serif;
+  letter-spacing: .1rem;
+  font-size: 15px; }
 
 .menu a {
   color: var(--white);
@@ -59,7 +110,7 @@ body {
 .menu a:hover,
 .show-menu-btn:hover,
 .hide-menu-btn:hover {
-  color: var(--grey-light-4); }
+  color: var(--grey-dark-3); }
 
 #chk {
   position: absolute;
@@ -108,30 +159,136 @@ body {
 
 .header {
   position: fixed;
-  font-family: 'Domine', serif;
   top: 0;
   z-index: 1;
   width: 100%;
   height: 100px;
-  padding: 0 20px;
+  padding: 0 10px;
   background-color: rgba(1, 1, 1, 0.3);
   color: rgba(1, 1, 1, 0.3); }
 
 .image-section {
   height: 100%;
   vertical-align: middle;
+  font-family: georgia, serif;
   clip-path: polygon(0 0, 100% 0, 100% 90vh, 0 100%);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover; }
   .image-section__text-box {
-    font-family: 'Bebas+Neue', serif;
     position: absolute;
     text-align: center;
     top: 40%;
     left: 50%;
     transform: translate(-50%, -50%); }
-  .image-section__logo-box {
-    font-family: 'Bebas+Neue', serif; }
-    .image-section__logo-box img {
-      width: 100%; }
+  .image-section__logo-box img {
+    width: 100%; }
+
+.section-about {
+  background-color: car(--grey-dark-3);
+  padding: 3rem; }
+
+body {
+  font-weight: 400;
+  /*font-size: 16px;*/
+  line-height: 1.5; }
+
+.heading-primary {
+  color: var(--white);
+  text-transform: uppercase;
+  font-family: georgia, serif;
+  backface-visibility: hidden;
+  margin-top: 30rem;
+  margin-bottom: 2rem; }
+  .heading-primary--main {
+    display: block;
+    font-size: 5rem;
+    font-weight: 400;
+    letter-spacing: 3rem;
+    animation-name: moveInLeft;
+    animation-duration: 1s;
+    animation-timing-function: ease-out; }
+  .heading-primary--sub {
+    display: block;
+    font-size: 4rem;
+    font-weight: 700;
+    letter-spacing: 1.3rem;
+    animation: moveInRight 1s ease-out;
+    margin-bottom: 5rem; }
+
+.heading-primary a {
+  font-size: 45px;
+  color: #fff;
+  -webkit-transition: all .2s ease-in-out;
+  -moz-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out; }
+
+.heading-primary a:hover {
+  font-size: 55px; }
+
+.fa-angle-double-down {
+  padding: 10px;
+  vertical-align: 60%; }
+
+.row {
+  max-width: 120rem;
+  margin: 0 auto;
+  /*
+    @include respond(tab-port) {
+        max-width: 50rem;
+        padding: 0 3rem;
+   }
+   */ }
+  .row:not(:last-child) {
+    margin-bottom: var(--gutter-vertical);
+    /*
+    @include respond(tab-port) {
+       margin-bottom: $gutter-vertical-small;
+     }
+    */ }
+  .row::after {
+    content: "";
+    display: table;
+    clear: both; }
+  .row [class^="col-"] {
+    float: left;
+    /*
+    @include respond(tab-port) {
+        width: 100% !important;
+    }
+    */ }
+    .row [class^="col-"]:not(:last-child) {
+      margin-right: 15rem;
+      /*
+        @include respond(tab-port) {
+         margin-right: 0;
+         margin-bottom: $gutter-vertical-small;
+       }
+    */ }
+  .row .col-1-of-2 {
+    width: calc((100% - 15rem) / 2); }
+  .row .col-1-of-3 {
+    width: calc((100% - 2 * 15rem) / 3); }
+  .row .col-2-of-3 {
+    width: calc( 2 * ((100% - 2 * 15rem) / 3) + 15rem); }
+  .row .col-1-of-4 {
+    width: calc((100% - 3 * 15rem) / 4); }
+  .row .col-2-of-4 {
+    width: calc( 2 * ((100% - 3 * 15rem) / 4) + 15rem); }
+  .row .col-3-of-4 {
+    width: calc( 3 * ((100% - 3 * 15rem) / 4) + 2 * 15rem); }
+
+/*
+0 - 600px:      Phone
+600 - 900px:    Tablet portrait
+900 - 1200px:   Tablet landscape
+[1200 - 1800] is where our normal styles apply
+1800px + :      Big desktop
+$breakpoint arguement choices:
+- phone
+- tab-port
+- tab-land
+- big-desktop
+ORDER: Base + typography > general layout + grid > page layout > components
+1em = 16px
+*/
