@@ -119,5 +119,60 @@
   #chk:checked~.menu {
     right: 0;
   }
+}
 
+.composition {
+    position: relative;
+
+    &__photo {
+        width: 90%;
+        border-radius: 2px;
+        position: absolute;
+        z-index: 0;
+        transition: all .2s;
+        outline-offset: 2rem;
+        margin: -150px 0 0 0;
+
+
+        &--p3 {
+            left: 10%;
+            top: 10rem;
+        }
+
+        &:hover {
+            transform: scale(1.05) translateY(-.5rem);
+            z-index: 0;
+        }
+    }
+
+    &:hover &__photo:not(:hover) {
+        transform: scale(.95);
+    }
+}
+
+//LEARN MORE button
+.btn-text {
+
+  &:link,
+  &:visited {
+    font-size: 20px;
+    color: $color-primary-dark;
+    display: inline-block;
+    text-decoration: none;
+    border-bottom: 1px solid $color-primary-dark;
+    margin-top: 10px;
+    transition: all .2s;
+  }
+
+  &:hover {
+    background-color: $color-primary-dark;
+    color: $color-white;
+    box-shadow: 0 1rem 2rem rgba($color-black, .15);
+    transform: translateY(-2px);
+  }
+
+  &:active {
+    box-shadow: 0 .5rem 1rem rgba($color-black, .15);
+    transform: translateY(0);
+  }
 }
