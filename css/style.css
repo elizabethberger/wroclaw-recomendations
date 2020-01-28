@@ -65,10 +65,11 @@ ORDER: Base + typography > general layout + grid > page layout > components
   float: left;
   letter-spacing: .2rem;
   padding: 0 10px 0 30px;
-  font-size: 20px;
+  font-size: 25px;
   text-transform: uppercase;
   cursor: pointer;
-  font-family: 'Bowlby+One+SC', serif; }
+  font-family: "Roboto+Slab", serif;
+  letter-spacing: .4rem; }
   .logo img {
     font-size: 10px;
     display: block;
@@ -199,25 +200,38 @@ ORDER: Base + typography > general layout + grid > page layout > components
 
 ul {
   list-style: none;
-  padding-left: 0; }
+  padding: 4px;
+  font-size: 13px;
+  letter-spacing: .2rem; }
 
 footer {
-  background-color: #555;
+  background-color: #000;
   color: #bbb;
   line-height: 1.5; }
 
 footer a {
   text-decoration: none;
-  color: #eee; }
+  transition: 0.4s;
+  color: #eee;
+  font-family: "Roboto+Slab", serif; }
+  footer a img {
+    font-size: 10px;
+    display: block;
+    width: 30px;
+    height: 30px;
+    float: right;
+    padding: 30px 10px; }
 
 a:hover {
-  text-decoration: underline; }
+  text-decoration: none;
+  color: var(--grey-dark-3); }
 
 .ft-title {
   color: #fff;
   font-family: "Merriweather", serif;
-  font-size: 2.375rem;
-  padding-bottom: 0.625rem; }
+  font-size: 1.775rem;
+  padding-bottom: 0.625rem;
+  letter-spacing: 0.2rem; }
 
 /* Sticks footer to bottom */
 body {
@@ -231,18 +245,20 @@ body {
 .ft-main-logo {
   padding: 1.25rem;
   min-width: 100%;
-  cursor: pointer;
-  border-top: 1px #777 solid; }
+  cursor: pointer; }
 
 .ft-main-logo li {
-  font-size: 3rem; }
+  font-size: 3rem;
+  list-style: none;
+  padding: 0 0 40px 0; }
 
 /* Footer main */
 .ft-main {
   padding: 1.25rem 1.875rem;
   text-align: center;
   display: flex;
-  flex-wrap: wrap; }
+  flex-wrap: wrap;
+  border-top: 1px #333 solid; }
 
 @media only screen and (min-width: 29.8125rem) {
   .ft-main {
@@ -259,7 +275,8 @@ body {
 /* Footer main | Newsletter form */
 form {
   display: flex;
-  flex-wrap: wrap; }
+  flex-wrap: wrap;
+  padding: 0 40px 0 40px; }
 
 input[type="email"] {
   border: 0;
@@ -281,17 +298,18 @@ input[type="submit"] {
 .ft-social-list {
   display: flex;
   justify-content: center;
-  border-top: 1px #777 solid;
+  border-top: 1px #122 solid;
   padding-top: 1.25rem; }
 
 .ft-social-list li {
   margin: 0.5rem;
-  font-size: 2.25rem; }
+  font-size: 2.25rem;
+  padding: 5px; }
 
 /* Footer legal */
 .ft-legal {
   padding: 0.9375rem 1.875rem;
-  background-color: #333; }
+  background-color: #000; }
 
 .ft-legal-list {
   width: 100%;
@@ -335,7 +353,7 @@ input[type="submit"] {
 
 .section-about {
   background-color: car(--grey-dark-3);
-  padding: 3rem 0 30rem; }
+  padding: 3rem 0 25rem; }
 
 body {
   font-weight: 400;
@@ -388,20 +406,18 @@ body {
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
-  letter-spacing: 0.2rem;
-  transition: all 0.2s; }
-  .heading-secondary:hover {
-    transform: skewY(1deg) skewX(1deg) scale(1.1);
-    text-shadow: 0.5rem 1rem 2rem rgba(55, 68, 79, 0.2); }
+  letter-spacing: 0.2rem; }
 
 .heading-tertiary {
   font-size: 20px;
   font-weight: 700;
   padding: 30px 0 0 0;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  letter-spacing: .2rem; }
 
 .paragraph {
-  font-size: 15px; }
+  font-size: 15px;
+  letter-spacing: .2rem; }
 
 .row {
   max-width: 120rem;
