@@ -63,13 +63,13 @@ ORDER: Base + typography > general layout + grid > page layout > components
   line-height: 100px;
   color: var(--white);
   float: left;
-  letter-spacing: .2rem;
+  letter-spacing: 0.2rem;
   padding: 0 10px 0 30px;
   font-size: 25px;
   text-transform: uppercase;
   cursor: pointer;
   font-family: "Roboto+Slab", serif;
-  letter-spacing: .4rem; }
+  letter-spacing: 0.4rem; }
   .logo img {
     font-size: 10px;
     display: block;
@@ -81,17 +81,19 @@ ORDER: Base + typography > general layout + grid > page layout > components
 .menu {
   float: right;
   line-height: 100px;
-  padding: 0 50px 0 10px;
+  padding: 0 10px 0 10px;
   font-family: georgia, serif;
-  letter-spacing: .1rem;
+  letter-spacing: 0.1rem;
   font-size: 15px; }
 
 .menu a {
   color: var(--white);
   text-transform: uppercase;
   text-decoration: none;
-  padding: 0 10px;
-  transition: 0.4s; }
+  padding: 10px 20px;
+  text-shadow: 0 0 1px rgba(255, 255, 255, 0.3);
+  transition: 0.4s;
+  border-radius: 100px; }
 
 .show-menu-btn,
 .hide-menu-btn {
@@ -108,7 +110,20 @@ ORDER: Base + typography > general layout + grid > page layout > components
 .show-menu-btn i {
   line-height: 100px; }
 
-.menu a:hover,
+.menu a:hover {
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 40px;
+  color: var(--grey-dark-3);
+  background: #fff;
+  -webkit-transition: height 0.3s, opacity 0.3s, -webkit-transform 0.3s;
+  -moz-transition: height 0.3s, opacity 0.3s, -moz-transform 0.3s;
+  transition: height 0.3s, opacity 0.3s, transform 0.3s;
+  -webkit-transform: translateY(-10px);
+  -moz-transform: translateY(-20px);
+  transform: translateY(-20px); }
+
 .show-menu-btn:hover,
 .hide-menu-btn:hover {
   color: var(--grey-dark-3); }
@@ -128,9 +143,6 @@ ORDER: Base + typography > general layout + grid > page layout > components
 
 .content p {
   text-align: justify; }
-
-.header-shadow {
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 2px 5px 0px, rgba(0, 0, 0, 0.12) 0px 2px 10px 0px; }
 
 @media screen and (max-width: 900px) {
   .show-menu-btn,
@@ -165,7 +177,7 @@ ORDER: Base + typography > general layout + grid > page layout > components
     border-radius: 2px;
     position: absolute;
     z-index: 0;
-    transition: all .2s;
+    transition: all 0.2s;
     outline-offset: 2rem;
     margin: -150px 0 0 0;
     box-shadow: -2rem 2.5rem 2rem rgba(251, 251, 251, 0.15); }
@@ -186,7 +198,7 @@ ORDER: Base + typography > general layout + grid > page layout > components
   text-decoration: none;
   border-bottom: 1px solid #3475A9;
   margin-top: 10px;
-  transition: all .2s; }
+  transition: all 0.2s; }
 
 .btn-text:hover {
   background-color: #3475A9;
@@ -202,7 +214,7 @@ ul {
   list-style: none;
   padding: 4px;
   font-size: 13px;
-  letter-spacing: .2rem; }
+  letter-spacing: 0.2rem; }
 
 footer {
   background-color: #000;
@@ -216,15 +228,9 @@ footer a {
   font-family: "Roboto+Slab", serif; }
   footer a img {
     font-size: 10px;
-    display: block;
     width: 30px;
     height: 30px;
-    float: right;
-    padding: 30px 10px; }
-
-a:hover {
-  text-decoration: none;
-  color: var(--grey-dark-3); }
+    padding: 0 10px; }
 
 .ft-title {
   color: #fff;
@@ -271,6 +277,9 @@ body {
 .ft-main-item {
   padding: 1.25rem;
   min-width: 12.5rem; }
+  .ft-main-item a:hover {
+    text-decoration: none;
+    color: var(--grey-dark-3); }
 
 /* Footer main | Newsletter form */
 form {
@@ -300,6 +309,9 @@ input[type="submit"] {
   justify-content: center;
   border-top: 1px #122 solid;
   padding-top: 1.25rem; }
+  .ft-social-list a:hover {
+    text-decoration: none;
+    color: var(--grey-dark-3); }
 
 .ft-social-list li {
   margin: 0.5rem;
@@ -315,6 +327,9 @@ input[type="submit"] {
   width: 100%;
   display: flex;
   flex-wrap: wrap; }
+  .ft-legal-list a:hover {
+    text-decoration: none;
+    color: var(--grey-dark-3); }
 
 .ft-legal-list li {
   margin: 0.125rem 0.625rem;
@@ -324,15 +339,21 @@ input[type="submit"] {
 .ft-legal-list li:nth-last-child(2) {
   flex: 1; }
 
-.header {
+nav {
   position: fixed;
   top: 0;
   z-index: 1;
   width: 100%;
   height: 100px;
-  padding: 0 10px;
-  background-color: rgba(1, 1, 1, 0.3);
-  color: rgba(1, 1, 1, 0.3); }
+  transition: background-color 1s ease-out; }
+
+nav span {
+  font-weight: 600;
+  letter-spacing: 0.085em; }
+
+nav.scroll {
+  background-color: #101111;
+  color: #eef; }
 
 .image-section {
   height: 100%;

@@ -1,10 +1,5 @@
-$(document).ready(function () {
-    $(window).scroll(function () {
-        var scroll = $(window).scrollTop();
-        if (scroll > 300) {
-            $(".header").css("background", "blue");
-        } else {
-            $(".header").css("background", "#333");
-        }
-    })
-})
+window.onscroll = () => {
+    const nav = document.querySelector('#navbar');
+    if (this.scrollY <= 10) nav.className = '';
+    else nav.className = 'scroll';
+};
