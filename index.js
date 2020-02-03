@@ -52,4 +52,16 @@ const router = new Router();
 router.get('/entertainment', function (req) {
     console.log(req.path); // outputs /about-me to the console
 });
+
+router.get('/monuments', function (req) {
+    console.log(req.path); // outputs /about-me to the console
+});
+
+router.get('/restaurants', function (req) {
+    console.log(req.path); // outputs /about-me to the console
+});
+
+router.get('/contact', function (req) {
+    console.log(req.path); // outputs /about-me to the console
+});
 router.init();

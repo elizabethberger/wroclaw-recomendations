@@ -416,7 +416,8 @@ body {
 
 .fa-angle-double-down {
   padding: 10px;
-  vertical-align: 60%; }
+  vertical-align: 60%;
+  transition: all .2s ease-in-out; }
 
 .heading-secondary {
   font-size: 3.5rem;
