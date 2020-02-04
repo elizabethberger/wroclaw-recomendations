@@ -1,11 +1,119 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
-<head> </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600" rel="stylesheet" />
+
+  <link href="https://fonts.googleapis.com/css?family=Cinzel" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" />
+  <title>Wroclaw Recommendations &mdash; Visit Wroclaw with US!</title>
+</head>
 
 <body>
-  <h1>
-    Hello world
-  </h1>
+  <nav id="navbar">
+    <div class="header header-shadow">
+      <h2 class="logo">LoveWro
+        <img src="img/icon.png" alt="Logo" class="header__icon" />
+      </h2>
+      <input type="checkbox" id="chk">
+      <label for="chk" class="show-menu-btn">
+        <i class="fas fa-bars"></i>
+      </label>
+      <ul class="menu">
+        <a href="/entertainment">Entertainment</a>
+        <a href="/monuments">Monuments</a>
+        <a href="/restaurants">Restaurants</a>
+        <a href="/contact">Contact</a>
+        <label for="chk" class="hide-menu-btn">
+          <i class="fas fa-times"></i>
+        </label>
+      </ul>
+    </div>
+  </nav>
+  <header class="image-section">
+    <div class="image-section__logo-box">
+      <img src="img/restaurants.jpeg" alt="Logo" class="header__logo" />
+    </div>
+  </header>
+
+  <section id="enterainment" class="section-enterainment">
+    <h2 class="heading-third">
+      Best restaurants in Wroclaw!
+    </h2>
+  </section>
+  <div class="container"></div>
+  <footer>
+    <!-- Footer main -->
+    <section class="ft-main">
+      <div class="ft-main-logo">
+        <li><a href="#">LOVEWRO
+            <img src="img/icon.png" alt="Logo" class="footer__icon" />
+          </a></li>
+      </div>
+      <div class="ft-main-item">
+        <h2 class="ft-title">About</h2>
+        <ul>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Portfolio</a></li>
+          <li><a href="#">Pricing</a></li>
+          <li><a href="#">Customers</a></li>
+          <li><a href="#">Careers</a></li>
+        </ul>
+      </div>
+      <div class="ft-main-item">
+        <h2 class="ft-title">Resources</h2>
+        <ul>
+          <li><a href="#">Docs</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">eBooks</a></li>
+          <li><a href="#">Webinars</a></li>
+        </ul>
+      </div>
+      <div class="ft-main-item">
+        <h2 class="ft-title">Contact</h2>
+        <ul>
+          <li><a href="#">Help</a></li>
+          <li><a href="#">Sales</a></li>
+          <li><a href="#">Advertise</a></li>
+        </ul>
+      </div>
+      <div class="ft-main-item">
+        <h2 class="ft-title">Stay Updated</h2>
+        <p>Subscribe to our newsletter to get our latest news.</p>
+        <form>
+          <input type="email" name="email" placeholder="Enter email address">
+          <input type="submit" value="➤">
+        </form>
+      </div>
+    </section>
+
+    <!-- Footer social -->
+    <section class="ft-social">
+      <ul class="ft-social-list">
+        <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+        <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+        <li><a href="#"><i class="fab fa-github"></i></a></li>
+        <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
+        <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+      </ul>
+    </section>
+
+    <!-- Footer legal -->
+    <section class="ft-legal">
+      <ul class="ft-legal-list">
+        <li><a href="#">Terms &amp; Conditions</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+        <li>&copy; 2020 Copyright Szulc.</li>
+      </ul>
+    </section>
+  </footer>
+  <script src="index.js"></script>
 </body>
 
 </html>
