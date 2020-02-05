@@ -149,7 +149,7 @@
     z-index: 0;
     transition: all 0.2s;
     outline-offset: 2rem;
-    margin: -150px 0 0 0;
+    margin: -50px 0 0 0;
     box-shadow: -2rem 2.5rem 2rem rgba($color-primary, 0.15);
 
     &--p3 {
@@ -382,4 +382,64 @@ nav span {
 nav.scroll {
   background-color: #000;
   color: #eef;
+}
+
+.composition_1 {
+  position: relative;
+
+  &__photo {
+    width: 90%;
+    border-radius: 2px;
+    position: absolute;
+    z-index: 0;
+    transition: all 0.2s;
+    outline-offset: 2rem;
+    margin: 50px 0 0 0;
+    box-shadow: -2rem 2.5rem 2rem rgba($color-primary, 0.15);
+
+    &--p3 {
+      left: 10%;
+      top: 10rem;
+    }
+
+    &:hover {
+      transform: scale(1.05) translateY(-0.5rem);
+      background-size: cover;
+      background-blend-mode: overlay;
+    }
+  }
+
+  &:hover &__photo:not(:hover) {
+    transform: scale(0.95);
+  }
+}
+
+.composition_2 {
+  position: relative;
+
+  &__photo {
+    width: 90%;
+    border-radius: 2px;
+    position: absolute;
+    z-index: 0;
+    transition: all 0.2s;
+    outline-offset: 2rem;
+    margin: 0 0 0 0;
+    box-shadow: -2rem 2.5rem 2rem rgba($color-primary, 0.15);
+
+    &--p3 {
+      left: 10%;
+      top: 10rem;
+    }
+
+    &:hover {
+      transform: scale(1.05) translateY(-0.5rem);
+      background-size: cover;
+      background-blend-mode: overlay;
+    }
+  }
+
+  &:hover &__photo:not(:hover) {
+    transform: scale(0.95);
+  }
 }
